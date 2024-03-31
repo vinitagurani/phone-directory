@@ -18,7 +18,8 @@ class Header extends Component{
     render () {
         return (
             <div className="header">
-            {this.props.heading}  /* this.props is necessary to use in the class component while accessing properties as it a keyword*/
+            {this.props.heading}
+             {/*this.props is necessary to use in the class component while accessing properties as it a keyword */}
         </div>
         )
     }

@@ -3,10 +3,15 @@ import Header from "./Header";
 import "./App.css";
 import ReactDOM from 'react-dom/client';
 
+class App extends Component {
+  // deleteHandler(){
+  //   alert("Delete clicked");
+  // };
+  clickHandler(message){
+    alert(message);
+  };
+render() {
 
-function App() {
-  // let x = 1;
-  // let y = 2;
   let subscribers = [
     {
       id: 1,
@@ -19,9 +24,11 @@ function App() {
       phone: 777777777
     }
   ]
+  
   return (
     <div> {/*one parent element*/}
-      <Header heading ="Phone Directory" ></Header> {/* passing props to render the header dynamically*/}
+      <Header heading ="Phone Directory" ></Header>
+      {/* passing props to render the header dynamically*/}
       <div className="component-body-container">
           <button className="custom-btn add-btn">Add</button>
           <div className="grid-container heading-container">
@@ -34,16 +41,16 @@ function App() {
                 <span className="grid-item">{sub.name}</span>
                 <span className="grid-item">{sub.phone}</span>
                 <span className="grid-item action-btn-container">
-                  <button className="custom-btn delete-btn">Delete</button>
+                  <button className="custom-btn delete-btn" onClick = {this.clickHandler.bind(this, "Delete clicked")}>Delete</button>
                 </span>
               </div>
             
           })}
-      </div>
-      
 
+      </div>
     </div>
-  );
+  )
+}
 }
 
 export default App;
