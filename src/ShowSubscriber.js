@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Header from "./Header";
-import "./App.css";
+import "./ShowSubscriber.css";
 import ReactDOM from 'react-dom/client';
 
-class App extends Component {
+class ShowSubscriber extends Component {
   // deleteHandler(){
   //   alert("Delete clicked");
   // };
@@ -16,6 +16,18 @@ class App extends Component {
       subscribersListToShow: []
     }
   }
+
+  // componentDidMount () {
+  //   let newSubscriber = {
+  //     id: 1,
+  //     name: "Vinita",
+  //     phone: "999999999"
+  //   }
+  //   let subscribersList = this.state.subscribersListToShow;
+  //   subscribersList.push (newSubscriber);
+  //   this.setState({subscribersListToShow:subscribersList});
+
+  // }
 
 render() {
 
@@ -60,4 +72,4 @@ render() {
 }
 }
 
-export default App;
+export default ShowSubscriber;
