@@ -7,23 +7,30 @@ class App extends Component {
   // deleteHandler(){
   //   alert("Delete clicked");
   // };
-  clickHandler(message){
-    alert(message);
-  };
+  // clickHandler(message){
+  //   alert(message);
+  // };
+  constructor() {
+    super();
+    this.state = {
+      subscribersListToShow: []
+    }
+  }
+
 render() {
 
-  let subscribers = [
-    {
-      id: 1,
-      name: 'Vinita',
-      phone: 888888888
-    },
-    {
-      id: 2,
-      name: 'Shilpa',
-      phone: 777777777
-    }
-  ]
+  // let subscribers = [
+  //   {
+  //     id: 1,
+  //     name: 'Vinita',
+  //     phone: 888888888
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Shilpa',
+  //     phone: 777777777
+  //   }
+  // ]
   
   return (
     <div> {/*one parent element*/}
@@ -36,12 +43,12 @@ render() {
             <span className="grid-item phone-heading">Phone</span>
           </div>
 
-          {subscribers.map(sub => {
+          {this.state.subscribersListToShow.map(sub => {
             return <div key={sub.id} className="grid-container">
                 <span className="grid-item">{sub.name}</span>
                 <span className="grid-item">{sub.phone}</span>
                 <span className="grid-item action-btn-container">
-                  <button className="custom-btn delete-btn" onClick = {this.clickHandler.bind(this, "Delete clicked")}>Delete</button>
+                  <button className="custom-btn delete-btn">Delete</button>
                 </span>
               </div>
             
