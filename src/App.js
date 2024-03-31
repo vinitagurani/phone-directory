@@ -1,6 +1,8 @@
-// import React, {Component} from 'react';
+import React, {Component} from 'react';
 import Header from "./Header";
-import "./App.css"
+import "./App.css";
+import ReactDOM from 'react-dom/client';
+
 
 function App() {
   // let x = 1;
@@ -19,10 +21,9 @@ function App() {
   ]
   return (
     <div> {/*one parent element*/}
-      <Header/>
+      <Header heading ="Phone Directory" ></Header> {/* passing props to render the header dynamically*/}
       <div className="component-body-container">
           <button className="custom-btn add-btn">Add</button>
-
           <div className="grid-container heading-container">
             <span className="grid-item name-heading">Name</span>
             <span className="grid-item phone-heading">Phone</span>
@@ -39,6 +40,8 @@ function App() {
             
           })}
       </div>
+      
+
     </div>
   );
 }
